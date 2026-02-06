@@ -1,7 +1,9 @@
 "use client"
 import '@mantine/core/styles.css';
 
-import { Card, ColorSchemeScript, Container, MantineProvider, MantineThemeOverride, Paper, Select, createTheme, mantineHtmlProps, rem, useMantineColorScheme } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider, MantineThemeOverride, createTheme, mantineHtmlProps, rem } from '@mantine/core';
+import { useState } from 'react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export const mantineTheme: MantineThemeOverride = createTheme({
   fontSizes: {
@@ -37,7 +39,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
+  const [value, setValue] = useState('light');
 
   return (
     <html lang="en" {...mantineHtmlProps}>
@@ -45,7 +47,10 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider theme={mantineTheme} defaultColorScheme='dark'>{children}</MantineProvider>
+        <MantineProvider theme={mantineTheme} defaultColorScheme='dark'>
+          <ThemeToggle></ThemeToggle>
+          {children}
+          </MantineProvider>
       </body>
     </html>
   );
