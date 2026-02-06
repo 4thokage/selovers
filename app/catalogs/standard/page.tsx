@@ -42,7 +42,7 @@ export default function StandardCatalogPage() {
 
   return (
     <Container size="xl" py="xl">
-      <Stack spacing="md">
+      <Stack >
         <TextInput
           placeholder="Search by country, catalog #, year, face value, theme..."
           label="Search stamps"
@@ -50,7 +50,7 @@ export default function StandardCatalogPage() {
           onChange={(e) => setSearch(e.currentTarget.value)}
         />
         <Grid>
-          <Grid.Col xs={12} sm={4}>
+          <Grid.Col >
             <Select
               placeholder="Filter by topology"
               label="Topology"
@@ -60,7 +60,7 @@ export default function StandardCatalogPage() {
               clearable
             />
           </Grid.Col>
-          <Grid.Col xs={12} sm={4}>
+          <Grid.Col >
             <Select
               placeholder="Filter by FDC"
               label="FDC"
@@ -73,7 +73,7 @@ export default function StandardCatalogPage() {
               clearable
             />
           </Grid.Col>
-          <Grid.Col xs={12} sm={4}>
+          <Grid.Col>
             <Select
               placeholder="Filter by condition"
               label="Condition"
@@ -87,7 +87,7 @@ export default function StandardCatalogPage() {
 
         <Grid gutter="md">
           {filteredStamps.map((stamp) => (
-            <Grid.Col key={stamp.id} xs={12} sm={6} md={4} lg={3}>
+            <Grid.Col key={stamp.id}>
               <StampCard stamp={stamp} />
             </Grid.Col>
           ))}

@@ -20,7 +20,7 @@ export default function CatalogTablePage() {
 
   return (
     <Container size="xl" py="xl">
-      <Stack spacing="md">
+      <Stack>
         <TextInput
           placeholder="Search by country, catalog #, year, theme..."
           label="Search stamps"

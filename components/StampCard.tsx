@@ -39,9 +39,9 @@ export default function StampCard({ stamp }: StampCardProps) {
         /> */}
       </Card.Section>
 
-      <Stack spacing="xs" mt="sm">
-        <Group position="apart">
-          <Text weight={600}>{stamp.country}</Text>
+      <Stack>
+        <Group>
+          <Text>{stamp.country}</Text>
           {stamp.fdc && <Badge color="teal">FDC</Badge>}
         </Group>
 

@@ -37,7 +37,7 @@ export default function StampTable({ stamps }: StampTableProps) {
               <td>{s.estimatedPrice ? (s.estimatedPrice * 0.7).toFixed(2) : "-"}</td>
               <td>{s.fdc ? "Letter/FDC" : "Letter"}</td>
               <td>
-                <Group spacing="xs">
+                <Group>
                   <Button size="xs" variant="light" color="blue">
                     Trade
                   </Button>

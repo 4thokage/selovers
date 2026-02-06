@@ -63,14 +63,14 @@ export default function LoginPage() {
   return (
     <Container size={420} my={60}>
       <Paper p="xl" radius="md" withBorder>
-        <Title order={2} align="center" mb="md">
+        <Title order={2} mb="md">
           Login
         </Title>
-        <Text size="sm" color="dimmed" align="center" mb="xl">
+        <Text size="sm" c="dimmed" mb="xl">
           Enter your credentials to access your account
         </Text>
 
-        <Stack spacing="sm">
+        <Stack>
           <TextInput
             label="Email"
             placeholder="you@example.com"

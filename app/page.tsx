@@ -81,14 +81,7 @@ export default function HomePage() {
               radius="md"
               p="xl"
               bg={"rgba(255, 255, 255, 0.05)"}
-              sx={{
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontStyle: "italic",
-                color: "rgba(255,255,255,0.4)"
-              }}
+
             >
               🎟️ TODO: IMAGEM AQUI?
             </Paper>
